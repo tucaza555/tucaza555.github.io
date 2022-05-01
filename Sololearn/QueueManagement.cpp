@@ -3,7 +3,7 @@ using namespace std;
 
 template <class T>
 class Queue { 
-	int size; 
+	int size;
 	T* queue; 
 	
 	public:
@@ -11,10 +11,12 @@ class Queue {
 		size = 0;
 		queue = new T[100];
 	}
+	
 	void add(T data) { 
 		queue[size] = data; 
 		size++;
 	}
+	
 	void remove() { 
 		if (size == 0) { 
 			cout << "Queue is empty"<<endl; 
@@ -26,7 +28,8 @@ class Queue {
 			} 
 			size--; 
 		} 
-	} 
+	}
+	
 	void print() { 
 		if (size == 0) { 
 			cout << "Queue is empty"<<endl; 
@@ -37,6 +40,7 @@ class Queue {
 		} 
 		cout << endl;
 	}
+	
 	Queue operator+(Queue &obj) {
         Queue res;
         for(int i=0;i<this->size;i++) {
@@ -47,7 +51,7 @@ class Queue {
         }
         return res; 
     }
-}; 
+};
 
 int main() { 
 	Queue<int> q1; 
