@@ -42,14 +42,14 @@ class Queue {
 	}
 	
 	Queue operator+(Queue &obj) {
-        Queue res;
-        for(int i=0;i<this->size;i++) {
-            res.add(this->queue[i]);
-        }
-        for(int i=0;i<obj.size;i++) {
-            res.add(obj.queue[i]);
-        }
-        return res; 
+		Queue res;
+		for(int i=0;i<this->size;i++) {
+		    res.add(this->queue[i]);
+		}
+		for(int i=0;i<obj.size;i++) {
+		    res.add(obj.queue[i]);
+		}
+		return res; 
     }
 };
 
